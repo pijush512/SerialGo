@@ -1,11 +1,17 @@
 import React from 'react'
+import Navbar from '../components/navbar/page'
+import Footer from '../components/footer/footer'
 
 const MainLayout = ({children}: {children:React.ReactNode}) => {
   return (
     <div>
-        <header></header>
+        <header>
+            <Navbar/>
+        </header>
         <main>{children}</main>
-        <footer></footer>
+        <footer>
+            <Footer/>
+        </footer>
     </div>
   )
 }
