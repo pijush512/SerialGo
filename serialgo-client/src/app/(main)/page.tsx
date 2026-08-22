@@ -12,9 +12,7 @@ const page = () => {
     <div>
       <h1>Home page</h1>
 
-      <button onClick={toggleTheme}>
-        {theme === "dark" ? "light" : "dark"}
-        Theme Toggle</button>
+      
     </div>
       
     
