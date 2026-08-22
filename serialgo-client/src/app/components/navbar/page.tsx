@@ -19,6 +19,9 @@ const Navbar = () => {
         </nav>
 
         <div className="flex items-center gap-4">
+
+
+
           <Link 
             href="/login" 
             className="text-sm font-medium text-slate-700 hover:text-primary dark:text-slate-200 transition-colors"
