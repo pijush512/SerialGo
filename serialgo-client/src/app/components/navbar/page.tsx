@@ -4,6 +4,13 @@ import React, { useState } from 'react';
 import Link from "next/link";
 import { ThemeToggle } from '../themeToggle';
 
+const navLinks = [
+  { name: "Home", href: "/" },
+  { name: "Features", href: "/features" },
+  { name: "Pricing", href: "/pricing" },
+  { name: "About", href: "/about" },
+];
+
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -19,10 +26,15 @@ const Navbar = () => {
 
         {/* Desktop Navigation Links */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
-          <Link href="/" className="hover:text-foreground transition-colors">Home</Link>
-          <Link href="/features" className="hover:text-foreground transition-colors">Features</Link>
-          <Link href="/pricing" className="hover:text-foreground transition-colors">Pricing</Link>
-          <Link href="/about" className="hover:text-foreground transition-colors">About</Link>
+          {navLinks.map((link) => (
+            <Link 
+              key={link.href} 
+              href={link.href} 
+              className="hover:text-foreground transition-colors"
+            >
+              {link.name}
+            </Link>
+          ))}
         </nav>
 
         {/* Right Side Actions (Theme Toggle & Auth) */}
@@ -70,34 +82,15 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden border-b border-border bg-background px-4 pt-2 pb-6 space-y-4 shadow-lg">
           <nav className="flex flex-col space-y-3 text-base font-medium text-muted-foreground">
+            {navLinks.map((link) => (
             <Link 
-              href="/" 
-              onClick={() => setIsOpen(false)}
-              className="hover:text-foreground transition-colors py-1"
+              key={link.href} 
+              href={link.href} 
+              className="hover:text-foreground transition-colors"
             >
-              Home
+              {link.name}
             </Link>
-            <Link 
-              href="/features" 
-              onClick={() => setIsOpen(false)}
-              className="hover:text-foreground transition-colors py-1"
-            >
-              Features
-            </Link>
-            <Link 
-              href="/pricing" 
-              onClick={() => setIsOpen(false)}
-              className="hover:text-foreground transition-colors py-1"
-            >
-              Pricing
-            </Link>
-            <Link 
-              href="/about" 
-              onClick={() => setIsOpen(false)}
-              className="hover:text-foreground transition-colors py-1"
-            >
-              About
-            </Link>
+          ))}   
           </nav>
 
           <div className="pt-4 border-t border-border flex flex-col gap-3">
