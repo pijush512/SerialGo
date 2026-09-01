@@ -24,7 +24,7 @@ const Navbar = () => {
           </Link>
         </div> 
 
-        {/* Desktop Navigation Links */}
+        {/* Desktop Navigation  */}
         <nav className="hidden md:flex items-center gap-8 text-sm font-medium text-muted-foreground">
           {navLinks.map((link) => (
             <Link 
@@ -37,7 +37,7 @@ const Navbar = () => {
           ))}
         </nav>
 
-        {/* Right Side Actions (Theme Toggle & Auth) */}
+        {/* Right Side */}
         <div className="hidden md:flex items-center gap-4">
           <ThemeToggle />
           <Link 
