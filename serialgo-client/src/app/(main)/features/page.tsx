@@ -65,7 +65,7 @@ export default function FeaturesPage() {
         </div>
       </section>
 
-      {/* CTA Footer Section */}
+      {/* CTA */}
       <section className="py-20 px-4 text-center sm:px-6 lg:px-8 border-t border-border">
         <div className="max-w-3xl mx-auto space-y-6">
           <h2 className="text-3xl font-bold tracking-tight">Experience all features in action</h2>
