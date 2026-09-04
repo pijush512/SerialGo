@@ -58,7 +58,7 @@ export default function PricingPage() {
 
   return (
     <div className="flex flex-col min-h-[calc(100vh-4rem)] bg-background text-foreground py-16 px-4 sm:px-6 lg:px-8">
-      {/* Header */}
+      {/* Header part*/}
       <div className="max-w-4xl mx-auto text-center space-y-4 mb-12">
         <h1 className="text-4xl font-extrabold tracking-tight sm:text-5xl">
           Simple, Transparent <span className="text-primary">Pricing</span>
@@ -67,7 +67,6 @@ export default function PricingPage() {
           Choose the right plan for your workflow. No hidden fees, cancel anytime.
         </p>
 
-        {/* Billing Toggle */}
         <div className="flex items-center justify-center gap-3 pt-4">
           <span className={`text-sm font-medium ${!isAnnual ? "text-foreground" : "text-muted-foreground"}`}>
             Monthly
