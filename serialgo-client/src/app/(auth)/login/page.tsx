@@ -9,7 +9,7 @@ export default function LoginPage() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    // এখানে আপনার লগইন লজিক বা API কল যুক্ত করতে পারেন
+   
     console.log({ email, password });
   };
 
